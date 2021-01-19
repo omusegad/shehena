@@ -55,7 +55,7 @@
               <li class="nav-item"> <a href="#" class="nav-link">Prohibited Items</a> </li>
               <li class="nav-item"> <a href="#" class="nav-link"> Services <i class="bx bx-chevron-right"></i> </a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"> <a href="#" class="nav-link">Buy & Shipping</a> </li>
+                  <li class="nav-item"> <a href="{{ url("/buy-shipping") }}" class="nav-link">Buy & Shipping</a> </li>
                   <li class="nav-item"> <a href="#" class="nav-link">Shipping Only</a> </li>
                 </ul>
               </li>

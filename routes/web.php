@@ -1,25 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DccController;
-use App\Http\Controllers\LccController;
-use App\Http\Controllers\NhifController;
-use App\Http\Controllers\NssfController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\LeaveController;
-use App\Http\Controllers\RolesController;
-use App\Http\Controllers\RegionController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\EmployeeController;
-use App\Http\Controllers\HolidaysController;
-use App\Http\Controllers\JobgroupController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\LeaveTypesController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\LeaveSettingsController;
-use App\Http\Controllers\EmployeeSalaryController;
-use App\Http\Controllers\SalarySettingsController;
-use App\Http\Controllers\EmployeeProfileController;
+use App\Http\Controllers\BuyShippingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/buy-shipping', [BuyShippingController::class, 'index']);
+
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/customers', [AdminController::class, 'index'])->name('customers');
+
 });
