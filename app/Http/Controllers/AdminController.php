@@ -9,6 +9,6 @@ class AdminController extends Controller
 {
     public function index(){
         $users = User::All();
-        return view('admin.index',compact('users'));
+        return view('dashboard',compact('users'));
     }
 }

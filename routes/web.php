@@ -41,7 +41,5 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index']);
-    Route::resource('roles', RolesController::class);
-    Route::resource('/employees',EmployeeController::class);
+    Route::get('/customers', [AdminController::class, 'index'])->name('customers');
 });

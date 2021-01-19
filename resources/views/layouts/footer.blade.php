@@ -119,7 +119,6 @@
 </footer>
 <!-- footer-area-end -->
 
-
 <!-- jQuery --> 
 <script src="{{ asset('js/jquery.js') }}" type="text/Javascript"></script> 
 <script src="{{ asset('js/main.js') }}" type="text/Javascript"></script> 

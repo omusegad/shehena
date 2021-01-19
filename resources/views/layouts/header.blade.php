@@ -63,9 +63,21 @@
               <li class="nav-item"> <a href="#" class="nav-link">Partner with Us</a> </li>
             </ul>
             <div class="others-option">
-              <div class="get-quote"> 
-                  <a href="{{ route('login') }}" class="default-btn"> <span>Member Login</span> </a> 
-                </div>
+               <div class="get-quote"> 
+                    @if (Auth::check())
+                      <a class="btncustomer pr-5" href="{{ route('customers') }}"> <span> All Customers</span> </a> 
+                      <a class="default-btn" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                          @csrf
+                      </form>
+                    @else
+                      <a href="{{ route('login') }}" class="default-btn"> <span>Member Login</span> </a> 
+                    @endif
+              </div>
             </div>
           </div>
         </nav>

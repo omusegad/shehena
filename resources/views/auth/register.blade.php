@@ -63,7 +63,8 @@
             <div class="form-group my-4">
               <div class="form-check text- custom-control custom-checkbox">
                 <input id="agree" name="agree" class="custom-control-input" type="checkbox">
-                <label class="custom-control-label text-2 rounded-0" for="agree">Agree to <a href="#"><u>Terms & Conditions</u></a>.</label>
+                <label class="custom-control-label text-2 rounded-0" for="agree">Agree to 
+                    <a href="#"><u>Terms & Conditions</u></a>.</label>
               </div>
             </div>
             <button class="btn btn-primary btn-block rounded-0 shadow-none mt-4" type="submit"> {{ __('Sign Up') }}</button>
